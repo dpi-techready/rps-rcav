@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   # Add your actions below this line
   # ================================
-
+  
   def play_rock
     render({:template => "/game_templates/rock.html.erb"})
   end
