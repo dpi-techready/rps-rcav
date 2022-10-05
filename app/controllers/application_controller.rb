@@ -13,6 +13,21 @@ class ApplicationController < ActionController::Base
   end
 
   def play_scissors
+
+     index = rand(3)
+
+ moves = ["rock", "paper", "scissors"]
+
+ @comp_move = moves.at(index)
+
+ if @comp_move == "rock"
+   @outcome = "lost"
+ elsif @comp_move == "paper"  
+   @outcome = "won"
+ elsif @comp_move == "scissors"  
+   @outcome = "tied"
+ end  
+
     render({:template => "/game_templates/scissors.html.erb"})
   end
 end

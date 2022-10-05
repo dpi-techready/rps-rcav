@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>I am paper!</h1>
-</body>
-</html>
+<h2>We played paper!</h2>
+
+<% index = rand(3) %>
+
+<% moves = ["rock", "paper", "scissors"] %>
+
+<% comp_move = moves.at(index) %>
+
+<% if comp_move == "rock" %>
+    <% outcome = "won" %>
+  <% elsif comp_move == "paper" %>  
+    <% outcome = "tied" %>
+  <% elsif comp_move == "scissors" %>  
+    <% outcome = "lost" %>
+<% end %>  
+
+<h2>They played <%= comp_move %>!</h2>
+
+<h2>We <%= outcome %>!</h2>
